@@ -1,4 +1,6 @@
 #! /bin/bash
+sudo yum upgrade
+
 sudo yum install -y gcc g++ gtk+-devel libjpeg-devel libtiff-devel jasper-devel libpng-devel zlib-devel cmake unzip python-devel \
 	ncurses-devel texinfo gtk2-devel qt-devel tcl-devel tk-devel kernel-headers kernel-devel yum-priorities eigen3-devel —enablerepo=epel
 	
