@@ -1,4 +1,5 @@
 #! /bin/bash
+sudo yum update
 sudo yum upgrade
 
 sudo yum install -y gcc g++ gtk+-devel libjpeg-devel libtiff-devel jasper-devel libpng-devel zlib-devel cmake unzip python-devel \
