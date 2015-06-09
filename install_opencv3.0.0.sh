@@ -1,18 +1,29 @@
 #! /bin/bash
 sudo yum install -y gcc g++ gtk+-devel libjpeg-devel libtiff-devel jasper-devel libpng-devel zlib-devel cmake unzip python-devel \
 	ncurses-devel texinfo gtk2-devel qt-devel tcl-devel tk-devel kernel-headers kernel-devel yum-priorities eigen3-devel —enablerepo=epel
-
+	
 wget http://ftp-srv2.kddilabs.jp/Linux/distributions/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
 sudo rpm -ivh epel-release-6-8.noarch.rpm
 
-pip install numpy
+sudo yum install -y python27 python27-devel
+sudo yum install -y freetype-devel libpng-devel
+wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | python27
+sudo easy_install-2.7 pip
+sudo easy_install py4j
+sudo pip2.7 install ipython==2.0.0
+sudo pip2.7 install pyzmq==14.6.0
+sudo pip2.7 install jinja2==2.7.3
+sudo pip2.7 install tornado==4.2
+sudo pip2.7 install numpy
+sudo pip2.7 install matplotlib
+sudo yum install -y tmux
 
 wget https://github.com/Itseez/opencv/archive/3.0.0-beta.zip
 unzip 3.0.0-beta.zip
 cd opencv-3.0.0-beta
 mkdir build
 cd build
-export PYTHON_EXECUTABLE=$(readlink -e $(which python))
+export PYTHON_EXECUTABLE=$(readlink -e $(which python2.7))
 export PYTHON_INCLUDE_PATH=${PYTHON_EXECUTABLE%/*/*}/include
 export PYTHON_LIBRARY=${PYTHON_EXECUTABLE%/*/*}/lib/libpython2.7.a
 export PYTHON_NUMPY_INCLUDE_DIR=${PYTHON_EXECUTABLE%/*/*}/lib/python2.7/site-packages/numpy/core/include/numpy
