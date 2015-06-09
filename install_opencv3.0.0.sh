@@ -18,9 +18,10 @@ sudo pip2.7 install numpy
 sudo pip2.7 install matplotlib
 sudo yum install -y tmux
 
-wget https://github.com/Itseez/opencv/archive/3.0.0-beta.zip
-unzip 3.0.0-beta.zip
-cd opencv-3.0.0-beta
+
+wget https://github.com/Itseez/opencv/archive/3.0.0.zip
+unzip 3.0.0.zip
+cd opencv-3.0.0
 mkdir build
 cd build
 export PYTHON_EXECUTABLE=$(readlink -e $(which python2.7))
