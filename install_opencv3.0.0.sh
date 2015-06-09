@@ -13,13 +13,13 @@ sudo yum install -y freetype-devel libpng-devel
 wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | python27
 sudo easy_install-2.7 pip
 sudo easy_install py4j
-sudo pip2.7 install ipython==2.0.0
-sudo pip2.7 install pyzmq==14.6.0
-sudo pip2.7 install jinja2==2.7.3
-sudo pip2.7 install tornado==4.2
-sudo pip2.7 install numpy
-sudo pip2.7 install matplotlib
-sudo yum install -y tmux
+pip2.7 install ipython==2.0.0
+pip2.7 install pyzmq==14.6.0
+pip2.7 install jinja2==2.7.3
+pip2.7 install tornado==4.2
+pip2.7 install numpy
+pip2.7 install matplotlib
+yum install -y tmux
 
 
 wget https://github.com/Itseez/opencv/archive/3.0.0.zip
